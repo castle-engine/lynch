@@ -1,0 +1,11 @@
+{
+  "$$ClassName" : "TCastleComponent",
+  "Name" : "Component1",
+  "$NonVisualComponents" : [
+    {
+      "$$ClassName" : "TCastleSound",
+      "Name" : "SoundMusic",
+      "URL" : "castle-data:/audio/dark_fallout.ogg"
+    }
+  ]
+}
