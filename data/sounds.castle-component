@@ -5,6 +5,7 @@
     {
       "$$ClassName" : "TCastleSound",
       "Name" : "SoundMusic",
+      "Stream" : true,
       "URL" : "castle-data:/audio/dark_fallout.ogg"
     }
   ]
