@@ -8,17 +8,17 @@ Cat-astrophe Games Gamejam 2022-12-16.
 
 !["Lynch" demo image 1](demo-images/lynch_screen_0.png)
 
-!["Lynch" demo image 2](demo-images/screenshot 2022-12-17 00-11-37 select.png)
+!["Lynch" demo image 2](demo-images/screenshot_2022-12-17_00-11-37_select.png)
 
-!["Lynch" demo image 3](demo-images/screenshot 2022-12-17 00-13-26 select.png)
+!["Lynch" demo image 3](demo-images/screenshot_2022-12-17_00-13-26_select.png)
 
-!["Lynch" demo image 4](demo-images/screenshot 2022-12-17 00-18-03 select.png)
+!["Lynch" demo image 4](demo-images/screenshot_2022-12-17_00-18-03_select.png)
 
-!["Lynch" demo image 5](demo-images/screenshot 2022-12-17 00-34-00 select.png)
+!["Lynch" demo image 5](demo-images/screenshot_2022-12-17_00-34-00_select.png)
 
-!["Lynch" demo image 6](demo-images/screenshot 2022-12-17 00-34-10 select.png)
+!["Lynch" demo image 6](demo-images/screenshot_2022-12-17_00-34-10_select.png)
 
-!["Lynch" demo image 7](demo-images/screenshot 2022-12-17 00-45-57 select.png)
+!["Lynch" demo image 7](demo-images/screenshot_2022-12-17_00-45-57_select.png)
 
 Using [Castle Game Engine](https://castle-engine.io/).
 
