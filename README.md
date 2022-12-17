@@ -6,6 +6,20 @@ Cat-astrophe Games Gamejam 2022-12-16.
 - Right click to toggle mouse look.
 - Press F5 to make a screenshot.
 
+!["Lynch" demo image 1](demo-images/lynch_screen_0.png)
+
+!["Lynch" demo image 2](demo-images/screenshot 2022-12-17 00-11-37 select.png)
+
+!["Lynch" demo image 3](demo-images/screenshot 2022-12-17 00-13-26 select.png)
+
+!["Lynch" demo image 4](demo-images/screenshot 2022-12-17 00-18-03 select.png)
+
+!["Lynch" demo image 5](demo-images/screenshot 2022-12-17 00-34-00 select.png)
+
+!["Lynch" demo image 6](demo-images/screenshot 2022-12-17 00-34-10 select.png)
+
+!["Lynch" demo image 7](demo-images/screenshot 2022-12-17 00-45-57 select.png)
+
 Using [Castle Game Engine](https://castle-engine.io/).
 
 ## Building
