@@ -23,7 +23,8 @@ interface
 implementation
 
 uses SysUtils, Classes,
-  CastleWindow, CastleLog, CastleUIState, CastleSoundEngine, CastleComponentSerialize
+  CastleWindow, CastleLog, CastleUIState, CastleSoundEngine, CastleComponentSerialize,
+  CastleTimeUtils
   {$region 'Castle Initialization Uses'}
   // The content here may be automatically updated by CGE editor.
   , GameStateMenu
@@ -90,4 +91,6 @@ initialization
     In particular, it is not allowed to read files before ApplicationInitialize
     (because in case of non-desktop platforms,
     some necessary resources may not be prepared yet). }
+
+  Profiler.Enabled := true;
 end.
