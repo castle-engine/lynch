@@ -18,3 +18,7 @@ AndroidSigningProperties.txt
 # backups
 *~
 *.blend1
+backup/
+
+# Lazarus local files
+*.lps
