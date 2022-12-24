@@ -18,6 +18,8 @@ Using [Castle Game Engine](https://castle-engine.io/).
 
 !["Lynch" demo image - Castle Game Engine editor 2](demo-images/editor_2.png)
 
+!["Lynch" demo image - Castle Game Engine editor 3](demo-images/editor_3.png)
+
 !["Lynch" demo image - Blender 1](demo-images/blender_1.png)
 
 !["Lynch" demo image - Blender 2](demo-images/blender_2.png)
