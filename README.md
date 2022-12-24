@@ -6,6 +6,8 @@ Cat-astrophe Games Gamejam 2022-12-16.
 - Right click to toggle mouse look.
 - Press F5 to make a screenshot.
 
+Download a ready compiled version (for Windows and Linux) from https://cat-astrophe-games.itch.io/lynch .
+
 Using [Castle Game Engine](https://castle-engine.io/).
 
 ## Screenshots
