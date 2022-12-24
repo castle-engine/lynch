@@ -86,6 +86,8 @@ initialization
       Window.Height := Application.ScreenHeight * 2 div 3;
   }
 
+  Window.FullScreen := true;
+
   { You should not need to do *anything* more in the unit "initialization" section.
     Most of your game initialization should happen inside ApplicationInitialize.
     In particular, it is not allowed to read files before ApplicationInitialize
