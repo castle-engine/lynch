@@ -12,17 +12,20 @@ Using [Castle Game Engine](https://castle-engine.io/).
 
 !["Lynch" demo image 1](demo-images/lynch_screen_0.png)
 
-!["Lynch" demo image 2](demo-images/screenshot_2022-12-17_00-11-37_select.png)
+!["Lynch" demo image 2](demo-images/lynch_screen_1.png)
 
-!["Lynch" demo image 3](demo-images/screenshot_2022-12-17_00-13-26_select.png)
+!["Lynch" demo image - Castle Game Engine editor 1](demo-images/editor_1.png)
 
-!["Lynch" demo image 4](demo-images/screenshot_2022-12-17_00-18-03_select.png)
+!["Lynch" demo image - Castle Game Engine editor 2](demo-images/editor_2.png)
 
-!["Lynch" demo image 5](demo-images/screenshot_2022-12-17_00-34-00_select.png)
+!["Lynch" demo image - Blender 1](demo-images/blender_1.png)
 
-!["Lynch" demo image 6](demo-images/screenshot_2022-12-17_00-34-10_select.png)
+!["Lynch" demo image - Blender 2](demo-images/blender_2.png)
 
-!["Lynch" demo image 7](demo-images/screenshot_2022-12-17_00-45-57_select.png)
+!["Lynch" demo image - Blender 3](demo-images/blender_3.png)
+
+!["Lynch" demo image - Blender 4](demo-images/blender_4.png)
+
 
 ## Building
 
