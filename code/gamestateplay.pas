@@ -33,6 +33,7 @@ type
     MainViewport: TCastleViewport;
     WalkNavigation: TCastleWalkNavigation;
     PlayerCamera: TCastleCamera;
+    LabelMouseLookHint: TCastleLabel;
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
@@ -61,12 +62,25 @@ end;
 procedure TStatePlay.Start;
 var
   Footsteps: TFootstepsBehavior;
+  I: Integer;
+  SceneStatue: TCastleScene;
 begin
   inherited;
 
   Footsteps := TFootstepsBehavior.Create(FreeAtStop);
   Footsteps.Navigation := WalkNavigation;
   PlayerCamera.AddBehavior(Footsteps);
+
+  for I := 1 to 7 do
+  begin
+    SceneStatue := DesignedComponent('SceneStatue' + IntToStr(I)) as TCastleScene;
+    SceneStatue.AddBehavior(TStatueBehavior.Create(FreeAtStop));
+  end;
+
+  { TODO: This still causes some initial rotation, even with MouseLookIgnoreNextMotion
+  Container.MouseLookIgnoreNextMotion; // otherwise mouse motion during loading would rotate initial view
+  WalkNavigation.MouseLook := true;
+  }
 end;
 
 procedure TStatePlay.Stop;
@@ -77,9 +91,8 @@ end;
 procedure TStatePlay.Update(const SecondsPassed: Single; var HandleInput: Boolean);
 begin
   inherited;
-  { This virtual method is executed every frame.}
-  Assert(LabelFps <> nil, 'If you remove LabelFps from the design, remember to remove also the assignment "LabelFps.Caption := ..." from code');
   LabelFps.Caption := 'FPS: ' + Container.Fps.ToString;
+  LabelMouseLookHint.Exists := not WalkNavigation.MouseLook;
 end;
 
 function TStatePlay.Press(const Event: TInputPressRelease): Boolean;

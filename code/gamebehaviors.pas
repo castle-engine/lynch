@@ -18,7 +18,7 @@ unit GameBehaviors;
 
 interface
 
-uses CastleBehaviors, CastleTransform, CastleCameras, CastleTimeUtils;
+uses CastleBehaviors, CastleTransform, CastleCameras, CastleTimeUtils, CastleScene;
 
 type
   { Play footsteps sound, when we're walking.
@@ -44,7 +44,22 @@ type
     procedure Update(const SecondsPassed: Single; var RemoveMe: TRemoveType); override;
   end;
 
+  { Rotate the statue (and make a sound) when it is *not seen* by player. }
+  TStatueBehavior = class(TCastleBehavior)
+  strict private
+    Scene: TCastleScene;
+    SoundSource: TCastleSoundSource;
+  public
+    procedure ParentAfterAttach; override;
+    procedure Update(const SecondsPassed: Single; var RemoveMe: TRemoveType); override;
+  end;
+
 implementation
+
+uses Math,
+  CastleVectors;
+
+{ TFootstepsBehavior --------------------------------------------------------- }
 
 procedure TFootstepsBehavior.ParentAfterAttach;
 begin
@@ -85,6 +100,45 @@ begin
       FootstepsSoundSource.SoundPlaying := false;
     end;
   end;
+end;
+
+{ TStatueBehavior ------------------------------------------------------------ }
+
+procedure TStatueBehavior.ParentAfterAttach;
+begin
+  inherited;
+  Scene := Parent as TCastleScene;
+  SoundSource := Parent.FindBehavior(TCastleSoundSource) as TCastleSoundSource;
+end;
+
+procedure TStatueBehavior.Update(const SecondsPassed: Single; var RemoveMe: TRemoveType);
+const
+  RotationSpeed = 0.5; // radians / second
+var
+  Camera: TCastleCamera;
+  DesiredDirection, NewDirection: TVector3;
+  Angle: Single;
+begin
+  if not Scene.WasVisible then
+  begin
+    Camera := Parent.World.MainCamera;
+    DesiredDirection := Camera.WorldTranslation - Scene.LocalToWorld(TVector3.Zero);
+    MakeVectorsOrthoOnTheirPlane(DesiredDirection, Camera.GravityUp);
+    DesiredDirection := DesiredDirection.Normalize;
+
+    Angle := RotationAngleRadBetweenVectors(DesiredDirection, Parent.Direction);
+    if Angle > 0 then
+      Angle := Min(Angle, RotationSpeed * SecondsPassed)
+    else
+      Angle := Max(Angle, -RotationSpeed * SecondsPassed);
+    NewDirection := RotatePointAroundAxisRad(Angle, DesiredDirection, Camera.GravityUp);
+
+    Parent.Direction := NewDirection;
+    //Parent.Direction := DesiredDirection; // this would make immediate rotation
+  end else
+    Angle := 0;
+
+  SoundSource.SoundPlaying := Abs(Angle) > 0.001;
 end;
 
 end.

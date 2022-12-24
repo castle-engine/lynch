@@ -46,6 +46,9 @@ Goal was:
 Results:
 
 - 3D house and surroundings, with sensible proportions.
+- After gamejam small additions:
+    - Sounds: Ambience, footsteps, statues.
+    - Simple mechanics of creepy statues.
 
 ## TODO
 
@@ -61,8 +64,8 @@ Graphics:
 - Roof looks bad after Decimate, it should be made low-poly by correctly modelling very low-poly pieces.
 
 Sound effects:
-- Chirp-chirp.
-- Wind blowing
+- Chirp-chirp?
+- Wind blowing?
 
 Code:
 - Game mechanics; now there's nothing interactive.
