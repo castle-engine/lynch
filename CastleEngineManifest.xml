@@ -11,6 +11,7 @@ See https://castle-engine.io/project_manifest for documentation of this file.
   qualified_name="com.mycompany.lynch"
   caption="Lynch"
 >
+  <version value="1.0.0" code="1" />
   <compiler_options>
     <search_paths>
       <path value="code/" />
