@@ -56,7 +56,7 @@ type
 
 implementation
 
-uses Math,
+uses Math, SysUtils,
   CastleVectors;
 
 { TFootstepsBehavior --------------------------------------------------------- }
@@ -116,7 +116,7 @@ const
   RotationSpeed = 0.5; // radians / second
 var
   Camera: TCastleCamera;
-  DesiredDirection, NewDirection: TVector3;
+  DesiredDirection, NewDirection, Cross: TVector3;
   Angle: Single;
 begin
   if not Scene.WasVisible then
@@ -126,19 +126,31 @@ begin
     MakeVectorsOrthoOnTheirPlane(DesiredDirection, Camera.GravityUp);
     DesiredDirection := DesiredDirection.Normalize;
 
-    Angle := RotationAngleRadBetweenVectors(DesiredDirection, Parent.Direction);
-    if Angle > 0 then
-      Angle := Min(Angle, RotationSpeed * SecondsPassed)
-    else
-      Angle := Max(Angle, -RotationSpeed * SecondsPassed);
-    NewDirection := RotatePointAroundAxisRad(Angle, DesiredDirection, Camera.GravityUp);
+    // Cross is either gravity up, or negation of it, or zero
+    Cross := TVector3.CrossProduct(DesiredDirection, Parent.Direction);
 
-    Parent.Direction := NewDirection;
+    if not Cross.IsZero then
+    begin
+      Angle := RotationAngleRadBetweenVectors(DesiredDirection, Parent.Direction, Cross);
+
+      { Angle values after correcting below are very small, so we judge whether
+        to play SoundSource before correcting.
+        Also, this makes it independent of SecondsPassed,
+        so independent of system FPS. }
+      SoundSource.SoundPlaying := Abs(Angle) > 0.01;
+
+      if Angle > 0 then
+        Angle := Min(Angle, RotationSpeed * SecondsPassed)
+      else
+        Angle := Max(Angle, -RotationSpeed * SecondsPassed);
+      NewDirection := RotatePointAroundAxisRad(Angle, Parent.Direction, -Cross);
+
+      Parent.Direction := NewDirection;
+    end;
+
     //Parent.Direction := DesiredDirection; // this would make immediate rotation
   end else
-    Angle := 0;
-
-  SoundSource.SoundPlaying := Abs(Angle) > 0.001;
+    SoundSource.SoundPlaying := false;
 end;
 
 end.
