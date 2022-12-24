@@ -1,8 +1,18 @@
-audio/dark fallout.ogg
-  https://opengameart.org/content/4-projectile-launches
-  by remaxim
-  License(s): CC-BY-SA 3.0
-
-cthulhu:
+level/cthulhu statue:
   by Jedi2583
   https://sketchfab.com/3d-models/bronze-figurine-of-cthulhu-fd33d0baaf6441daabf253f152afc56c
+
+audio/Forgoten_tombs
+  by kindland
+  License(s): CC0
+  https://opengameart.org/content/forgoten-tomb-ambience
+
+audio/footsteps_dirt_*:
+  by Little Robot Sound Factory
+  License: CC-BY 3.0
+  https://opengameart.org/content/fantasy-sound-effects-library
+
+audio/558216__msavioti__stone-push.wav
+  by msavioti
+  License: CC0 (public domain)
+  from https://freesound.org/people/msavioti/sounds/558216/

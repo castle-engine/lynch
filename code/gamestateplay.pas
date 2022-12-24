@@ -32,6 +32,7 @@ type
     LabelFps: TCastleLabel;
     MainViewport: TCastleViewport;
     WalkNavigation: TCastleWalkNavigation;
+    PlayerCamera: TCastleCamera;
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
@@ -47,7 +48,7 @@ implementation
 
 uses SysUtils, Math,
   CastleSoundEngine, CastleLog, CastleStringUtils, CastleFilesUtils,
-  GameStateMenu;
+  GameStateMenu, GameBehaviors;
 
 { TStatePlay ----------------------------------------------------------------- }
 
@@ -58,8 +59,14 @@ begin
 end;
 
 procedure TStatePlay.Start;
+var
+  Footsteps: TFootstepsBehavior;
 begin
   inherited;
+
+  Footsteps := TFootstepsBehavior.Create(FreeAtStop);
+  Footsteps.Navigation := WalkNavigation;
+  PlayerCamera.AddBehavior(Footsteps);
 end;
 
 procedure TStatePlay.Stop;
@@ -79,16 +86,6 @@ function TStatePlay.Press(const Event: TInputPressRelease): Boolean;
 begin
   Result := inherited;
   if Result then Exit; // allow the ancestor to handle keys
-
-  { This virtual method is executed when user presses
-    a key, a mouse button, or touches a touch-screen.
-
-    Note that each UI control has also events like OnPress and OnClick.
-    These events can be used to handle the "press", if it should do something
-    specific when used in that UI control.
-    The TStatePlay.Press method should be used to handle keys
-    not handled in children controls.
-  }
 
   if Event.IsMouseButton(buttonRight) then
   begin

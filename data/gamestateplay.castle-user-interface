@@ -6,7 +6,7 @@
     {
       "$$ClassName" : "TCastleViewport",
       "Background" : "Background1",
-      "Camera" : "Camera1",
+      "Camera" : "PlayerCamera",
       "FullSize" : true,
       "Items" : {
         "$$ClassName" : "TCastleRootTransform",
@@ -16,7 +16,7 @@
         "$Children" : [
           {
             "$$ClassName" : "TCastleCamera",
-            "Name" : "Camera1",
+            "Name" : "PlayerCamera",
             "Orthographic" : {
               "$$ClassName" : "TCastleOrthographic"
             },
@@ -39,7 +39,24 @@
               "X" : -1.7646591186523438E+001,
               "Y" : 2.7644217014312744E+000,
               "Z" : 6.0018203735351562E+001
-            }
+            },
+            "$Behaviors" : [
+              {
+                "$$ClassName" : "TCastleSoundSource",
+                "Name" : "SoundSourceFootsteps",
+                "Sound" : "SoundFootsteps",
+                "SoundPlaying" : false,
+                "Spatial" : false,
+                "Volume" : 8.0000001192092896E-001,
+                "$NonVisualComponents" : [
+                  {
+                    "$$ClassName" : "TCastleSound",
+                    "Name" : "SoundFootsteps",
+                    "URL" : "castle-data:/audio/footsteps_dirt_9_silence.wav"
+                  }
+                ]
+              }
+            ]
           },
           {
             "$$ClassName" : "TCastleTransform",
@@ -120,6 +137,194 @@
               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
             },
             "URL" : "castle-data:/level/level.gltf"
+          },
+          {
+            "$$ClassName" : "TCastleTransform",
+            "Name" : "Statues",
+            "$Children" : [
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue1",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 1.0995054244995117E+000,
+                  "Y" : 9.9999976158142090E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -1.1411243438720703E+001,
+                  "Z" : 9.6062250137329102E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue2",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 1.2177277803421021E+000,
+                  "Y" : 1.0000000000000000E+000
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -9.4052715301513672E+000,
+                  "Z" : 6.5976266860961914E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue3",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 2.2770738601684570E+000,
+                  "Y" : 9.9999910593032837E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -8.6966905593872070E+000,
+                  "Z" : 1.8285903930664062E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue4",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 2.8981311321258545E+000,
+                  "Y" : 9.9999821186065674E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -1.2139001846313477E+001,
+                  "Z" : -3.8026565313339233E-001
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue5",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 4.2063684463500977E+000,
+                  "Y" : 9.9999809265136719E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -2.0517261505126953E+001,
+                  "Z" : 1.7144153118133545E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue6",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 4.9295940399169922E+000,
+                  "Y" : 9.9999600648880005E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -2.1729797363281250E+001,
+                  "Z" : 5.5247106552124023E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              },
+              {
+                "$$ClassName" : "TCastleScene",
+                "ExposeTransforms" : [
+                ],
+                "Name" : "SceneStatue7",
+                "RenderOptions" : {
+                  "$$ClassName" : "TCastleScene.TSceneRenderOptions"
+                },
+                "RotationPersistent" : {
+                  "$$ClassName" : "TCastleVector4RotationPersistent",
+                  "W" : 5.4982166290283203E+000,
+                  "Y" : 9.9999111890792847E-001
+                },
+                "ScalePersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : 8.0000001192092896E-001,
+                  "Y" : 8.0000001192092896E-001,
+                  "Z" : 8.0000001192092896E-001
+                },
+                "TranslationPersistent" : {
+                  "$$ClassName" : "TCastleVector3Persistent",
+                  "X" : -1.7498310089111328E+001,
+                  "Z" : 9.6694574356079102E+000
+                },
+                "URL" : "castle-data:/level/statue_simpler.gltf"
+              }
+            ]
           }
         ]
       },
@@ -154,21 +359,21 @@
         },
         "RotationPersistent" : {
           "$$ClassName" : "TCastleVector4RotationPersistent",
-          "W" : 3.1208783388137817E-001,
-          "X" : -8.0064225196838379E-001,
-          "Y" : -5.9780168533325195E-001,
-          "Z" : -4.0064211934804916E-002
+          "W" : 7.1406245231628418E-001,
+          "X" : -5.1187598705291748E-001,
+          "Y" : -8.4719687700271606E-001,
+          "Z" : -1.4226911962032318E-001
         },
         "TranslationPersistent" : {
           "$$ClassName" : "TCastleVector3Persistent",
-          "X" : -1.3215922355651855E+001,
-          "Y" : 9.6153450012207031E+000,
-          "Z" : 1.4966197967529297E+001
+          "X" : -2.2177448272705078E+001,
+          "Y" : 1.5209065437316895E+001,
+          "Z" : 1.1861471176147461E+001
         }
       },
       "InternalDesignNavigations[dnFly]" : {
         "$$ClassName" : "TCastleWalkNavigationDesign",
-        "MoveSpeed" : 2.7122728347778320E+001,
+        "MoveSpeed" : 3.6869453430175781E+001,
         "Name" : ""
       },
       "InternalDesignNavigations[dnExamine]" : {
