@@ -39,7 +39,7 @@ uses
 // uncomment and recomment this line, for compile-time-switching between integrated GPU and dedicated GPU
 {$define ForceDedicatedGPUUsage}
 
-{$if defined(ForceDedicatedGPUUsage) and (defined(cpu386) or defined(cpux64) or defined(cpuamd64)) and (not defined(Darwin))}
+{$if defined(ForceDedicatedGPUUsage) and (defined(cpu386) or defined(cpux64) or defined(cpuamd64)) and (defined(MSWINDOWS) or defined(Linux))}
 
 {$ifdef fpc}
  {$asmmode intel}
