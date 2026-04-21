@@ -11,7 +11,13 @@
       "Items" : {
         "$$ClassName" : "TCastleRootTransform",
         "PhysicsProperties" : {
-          "$$ClassName" : "TPhysicsProperties"
+          "$$ClassName" : "TPhysicsProperties",
+          "LayerCollisions" : {
+            "$$ClassName" : "TCastleLayerCollisions"
+          },
+          "LayerNames" : {
+            "$$ClassName" : "TCastleLayerNames"
+          }
         },
         "$Children" : [
           {
@@ -52,7 +58,7 @@
                   {
                     "$$ClassName" : "TCastleSound",
                     "Name" : "SoundFootsteps",
-                    "URL" : "castle-data:/audio/footsteps_dirt_9_silence.wav"
+                    "Url" : "castle-data:/audio/footsteps_dirt_9_silence.wav"
                   }
                 ]
               }
@@ -81,7 +87,7 @@
               },
               {
                 "$$ClassName" : "TCastlePointLight",
-                "Intensity" : 2.0000000000000000E+000,
+                "Intensity" : 2.0000000000000000E+002,
                 "Name" : "PointLight4",
                 "Radius" : 1.0000000000000000E+003,
                 "TranslationPersistent" : {
@@ -93,7 +99,7 @@
               },
               {
                 "$$ClassName" : "TCastlePointLight",
-                "Intensity" : 2.0000000000000000E+000,
+                "Intensity" : 2.0000000000000000E+002,
                 "Name" : "PointLight5",
                 "Radius" : 1.0000000000000000E+003,
                 "TranslationPersistent" : {
@@ -115,7 +121,6 @@
                   "Green" : 0.0000000000000000E+000,
                   "Red" : 7.2156864404678345E-001
                 },
-                "Intensity" : 1.0000000000000000E+002,
                 "Name" : "PointLight2",
                 "Radius" : 8.0000000000000000E+000,
                 "TranslationPersistent" : {
@@ -136,7 +141,7 @@
             "RenderOptions" : {
               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
             },
-            "URL" : "castle-data:/level/level.gltf"
+            "Url" : "castle-data:/level/level.gltf"
           },
           {
             "$$ClassName" : "TCastleTransform",
@@ -166,7 +171,7 @@
                   "X" : -1.1411243438720703E+001,
                   "Z" : 9.6062250137329102E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -178,7 +183,7 @@
                       {
                         "$$ClassName" : "TCastleSound",
                         "Name" : "SoundStatue",
-                        "URL" : "castle-data:/audio/selection_558216__msavioti__stone-push.wav"
+                        "Url" : "castle-data:/audio/selection_558216__msavioti__stone-push.wav"
                       }
                     ]
                   }
@@ -208,7 +213,7 @@
                   "X" : -9.4052715301513672E+000,
                   "Z" : 6.5976266860961914E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -243,7 +248,7 @@
                   "X" : -8.6966905593872070E+000,
                   "Z" : 1.8285903930664062E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -278,7 +283,7 @@
                   "X" : -1.2139001846313477E+001,
                   "Z" : -3.8026565313339233E-001
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -313,7 +318,7 @@
                   "X" : -2.0517261505126953E+001,
                   "Z" : 1.7144153118133545E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -348,7 +353,7 @@
                   "X" : -2.1729797363281250E+001,
                   "Z" : 5.5247106552124023E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -383,7 +388,7 @@
                   "X" : -1.7498310089111328E+001,
                   "Z" : 9.6694574356079102E+000
                 },
-                "URL" : "castle-data:/level/statue_simpler.gltf",
+                "Url" : "castle-data:/level/statue_simpler.gltf",
                 "$Behaviors" : [
                   {
                     "$$ClassName" : "TCastleSoundSource",
@@ -417,7 +422,7 @@
               "Y" : -3.3964130282402039E-001,
               "Z" : -2.9790004730224609E+001
             },
-            "URL" : "castle-data:/water/water.x3dv"
+            "Url" : "castle-data:/water/water.x3dv"
           },
           {
             "$$ClassName" : "TCastleScene",
@@ -440,7 +445,7 @@
               "Y" : 3.1886416673660278E-001,
               "Z" : 4.5296363830566406E+000
             },
-            "URL" : "castle-data:/water/water_circle.x3dv"
+            "Url" : "castle-data:/water/water_circle.x3dv"
           }
         ]
       },
@@ -475,21 +480,20 @@
         },
         "RotationPersistent" : {
           "$$ClassName" : "TCastleVector4RotationPersistent",
-          "W" : 1.0507403612136841E+000,
-          "X" : -2.7195805311203003E-001,
-          "Y" : -9.5068562030792236E-001,
-          "Z" : -1.4911657571792603E-001
+          "W" : 5.1755130290985107E-001,
+          "X" : -7.8589785099029541E-001,
+          "Y" : -6.0567605495452881E-001,
+          "Z" : -1.2458381801843643E-001
         },
         "ScalePersistent" : {
           "$$ClassName" : "TCastleVector3Persistent",
-          "X" : 9.9999994039535522E-001,
-          "Z" : 9.9999994039535522E-001
+          "Y" : 9.9999994039535522E-001
         },
         "TranslationPersistent" : {
           "$$ClassName" : "TCastleVector3Persistent",
-          "X" : -2.3981256484985352E+001,
-          "Y" : 5.2278938293457031E+000,
-          "Z" : 9.5567293167114258E+000
+          "X" : -2.5708927154541016E+001,
+          "Y" : 2.0902479171752930E+001,
+          "Z" : 5.7536964416503906E+001
         }
       },
       "InternalDesignNavigations[dnFly]" : {
