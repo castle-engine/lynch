@@ -19,11 +19,11 @@ unit GameStateMenu;
 interface
 
 uses Classes,
-  CastleUIState, CastleComponentSerialize, CastleUIControls, CastleControls;
+  CastleComponentSerialize, CastleUIControls, CastleControls;
 
 type
   { Simple "menu" user interface, that allows to run the game or quit. }
-  TStateMenu = class(TUIState)
+  TStateMenu = class(TCastleView)
   published
     { Components designed using CGE editor.
       These fields will be automatically initialized at Start. }
@@ -63,7 +63,7 @@ end;
 
 procedure TStateMenu.ClickPlay(Sender: TObject);
 begin
-  TUIState.Current := StatePlay;
+  Container.View := StatePlay;
 end;
 
 procedure TStateMenu.ClickQuit(Sender: TObject);

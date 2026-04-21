@@ -50,7 +50,7 @@ begin
   StateMenu := TStateMenu.Create(Application);
   {$endregion 'Castle State Creation'}
 
-  TUIState.Current := StateMenu;
+  Window.Container.View := StateMenu;
 
   Sounds := TComponent.Create(Application);
   ComponentLoad('castle-data:/sounds.castle-component', Sounds);
